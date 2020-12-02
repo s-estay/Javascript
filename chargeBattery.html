@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <title>Charge Battery</title>
+  <style>
+    #battery{
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="battery" class="fa"></div>
+
+  <script>
+    //battery charge animation
+    function chargeBattery(){
+      let battery = document.getElementById('battery');
+      battery.innerHTML = "&#xf244;";
+
+      setTimeout(function(){
+        battery.innerHTML = "&#xf243;";
+      }, 1000);
+
+      setTimeout(function(){
+        battery.innerHTML = "&#xf242;";
+      }, 2000);
+      setTimeout(function(){
+        battery.innerHTML = "&#xf241;";
+      }, 3000);
+
+      setTimeout(function(){
+        battery.innerHTML = "&#xf240;";
+      }, 4000);
+    }
+
+    // call animation
+    chargeBattery();
+
+    // animate every five seconds
+    setInterval(chargeBattery, 5000);
+  </script>
+
+</body>
+</html>
